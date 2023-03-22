@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vertigo</title>
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <img src="./assets/logo.svg" alt="Logo Vertigo" />
+      <div class="wrapper">
+        <div>
+          <h1>Acesse a plataforma</h1>
+          <p>
+            Faça login ou registre-se para começar a construir seus projetos
+            ainda hoje.
+          </p>
+        </div>
+        <form action="">
+          <div class="form-control">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              placeholder="Digite seu e-mail"
+              name="email"
+              id="email"
+            />
+          </div>
+          <div class="form-control">
+            <div class="wrapping">
+              <label for="password">Senha</label>
+              <a href="#">Esqueceu a senha?</a>
+            </div>
+            <div class="showPassword">
+              <input
+                type="password"
+                placeholder="Digite sua senha"
+                name="password"
+                id="password"
+              />
+              <img src="./assets/eye-slash-fill.svg" />
+            </div>
+            <span role="alert" id="error" aria-hidden="true"
+              >Usuário ou senha inválidos.</span
+            >
+          </div>
+          <button id="submit">Entrar</button>
+        </form>
+        <p>Ainda não tem uma conta? <a href="#">Inscreva-se</a></p>
+      </div>
+    </main>
+    <img src="./assets/imagem.jpg" alt="" />
+    <script src="./script.js"></script>
+  </body>
+</html>
