@@ -1,0 +1,194 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --Purple: #7c3aed;
+  --Gray-50: #f8fafc;
+  --Gray-100: #f1f5f9;
+  --Gray-200: #e2e8f0;
+  --Gray-300: #cbd5e1;
+  --Gray-400: #94a3b8;
+  --Gray-500: #64748b;
+  --Gray-600: #475569;
+  --Gray-700: #334155;
+  --Gray-800: #334155;
+  --Gray-900: #334155;
+}
+html {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*pode ser transparent também*/
+  /* Remover o fundo azul do show/hide password segundo alguem no stackoverflow é chamado de highlight */
+}
+body {
+  font-size: 1.6rem;
+  background: var(--Gray-50);
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-family: "Titillium Web", sans-serif;
+}
+body > img {
+  width: 100%;
+  height: 100vh;
+}
+main > img {
+  margin-top: 4rem;
+}
+main {
+  display: grid;
+  width: 38.4rem;
+  margin-left: 11.2rem;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+h1 {
+  margin-bottom: 1.6rem;
+  font-weight: 700;
+  font-size: 3.6rem;
+  line-height: 5.476rem;
+  color: var(--Gray-800);
+}
+p {
+  color: var(--Gray-600);
+  line-height: 2.434rem;
+}
+.form-control {
+  margin-bottom: 1.6rem;
+}
+.wrapping {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+label {
+  color: #1e293b;
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+input {
+  width: 100%;
+  padding: 1.6rem 1.2rem;
+  border: 0.1rem solid var(--Gray-200);
+  border-radius: 0.4rem;
+  margin-top: 0.8rem;
+  outline: none;
+}
+input::placeholder {
+  color: var(--Gray-400);
+}
+button {
+  width: 100%;
+  padding: 1.6rem 2.4rem;
+  border-radius: 0.4rem;
+  background: var(--Purple);
+  color: #fff;
+  font-weight: 700;
+  border: none;
+  line-height: 2.4rem;
+  margin: 1.6rem 0 3.2rem 0;
+}
+a {
+  text-decoration: none;
+  color: var(--Purple);
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+a:first-child {
+  margin-left: auto;
+}
+a:last-child {
+  font-weight: 700;
+}
+/* =======================BUTTON======================= */
+
+button:hover {
+  background: #9f67ff;
+  cursor: pointer;
+}
+/* =======================inscreva-se======================= */
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ======================= INPUT ======================= */
+
+input:hover {
+  border: 1px solid var(--Purple);
+}
+input:focus {
+  border: 1px solid var(--Purple);
+}
+input:disabled {
+  border: 1px solid var(--Gray-50);
+  background: #fff;
+}
+input:autofill {
+  background: #ed3a5a;
+}
+input:-webkit-autofill {
+  background: #ed3a5a;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+/* VALID */
+
+#error {
+  display: none;
+}
+#error.invalid {
+  font-size: 1.4rem;
+  color: #ed3a5a;
+  line-height: 2.129rem;
+  display: block;
+  margin-top: 0.4rem;
+}
+/* MEDIA */
+
+@media (max-width: 600px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: #dcdcdc;
+  }
+  main {
+    margin-inline: auto;
+  }
+  body > img {
+    display: none;
+  }
+}
+/* OLHO DO PASSWORD */
+
+.form-control img:hover {
+  cursor: pointer;
+}
+.showPassword {
+  display: flex;
+  position: relative;
+  /* align-items: center; */
+}
+.form-control img {
+  position: absolute;
+  margin-right: 1.2rem;
+  right: 0;
+  transform: translateY(100%);
+}
+.form-control img:checked {
+  background: transparent;
+}
